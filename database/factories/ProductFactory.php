@@ -18,7 +18,7 @@ class ProductFactory extends Factory
     {
         return [
             'item_code'=>'IC-1000'.rand(10,500),
-            'description'=>fake()->realText(),
+            'description'=>fake()->realText(10),
             'unit_price'=>mt_rand(100, 1000),
         ];
     }
