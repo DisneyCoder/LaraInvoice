@@ -41,6 +41,14 @@ const subTotal = () => {
 const grandTotal = () => subTotal() - form.value.discount;
 ```
 
+## 🖼️ App Screenshots
+
+![App Home](public/demo/laraInvoiceHome.jpg)
+
+![New Invoice](public/demo/laraInvoiceNew.jpg)
+
+![Show Invoice](public/demo/laraInvoiceShow.jpg)
+
 ## 📋 How It Works
 
 1. **Select a Customer:** Choose from a list of customers.
