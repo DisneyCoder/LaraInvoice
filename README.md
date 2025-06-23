@@ -1,6 +1,6 @@
 # 🧾 Invoice Management App
 
-A modern web application for creating and managing invoices, built with **Laravel** (backend) and **Vue.js** (frontend).
+**LaraInvoice** a modern web application for creating and managing invoices, built with **Laravel** (backend) and **Vue.js** (frontend).
 
 ## ✨ Features
 
