@@ -1,15 +1,28 @@
 <script setup>
 import axios from "axios";
-import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted, ref, onActivated, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
+const route = useRoute();
 let invoices = ref([]);
 let searchInvoice = ref([]);
 
 onMounted(async () => {
     getInvoices();
 });
+onActivated(() => {
+    getInvoices();
+});
+watch(
+    () => route.query.refresh,
+    (newVal) => {
+        if (newVal) {
+            getInvoices();
+            router.replace({ query: {} }); // Remove the refresh param after reload
+        }
+    }
+);
 const getInvoices = async () => {
     let response = await axios.get("/api/get_all_invoice");
     invoices.value = response.data.invoices;
